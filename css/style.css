@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 18px;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+h1{
+    text-transform: uppercase;
+    color:hsl(230, 29%, 20%);
+    font-weight: 700;
+    font-size: 2.7em;
+}
+
+h4{
+    text-transform: uppercase;
+    color:hsl(230, 11%, 40%);
+    font-weight: 400;
+    line-height: 1.8em;
+    margin-bottom: 30px;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-img{
+    margin-top: 35px;
+    margin-left: 150px;
+}
+
+ul li{
+    list-style: none;
+    text-transform: uppercase;
+    color: hsl(230, 29%, 20%);
+    padding: 10px;
+    top: 40px;
+    left: 10%;
+    position: relative;
+    display: inline;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+u li:nth-child(4), ul li:last-child{
+    color: hsl(231, 7%, 65%);
+}
+
+ul li:hover{
+    text-decoration: underline hsl(230, 29%, 20%);
+}
+
+.nav-items{
+    background: hsl(207, 33%, 95%);
+    position: relative;
+    height: 350px;
+    width: 45%;
+    border-bottom-left-radius: 70px;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.intro{
+    margin-left: 150px;
+    position: relative;
+    top:-150px;
+    height: 150px;
+}
+
+.intro p{
+    margin-top: 20px;
+    font-size: 1.2em;
+    margin-bottom: 70px;
+    width:60%;
+    color:hsl(230, 29%, 20%);
+    font-weight: 400;
+}
+
+.new{
+    color: white;
+    background: hsl(230, 29%, 20%);
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.demo{
+    background: hsl(0, 100%, 68%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding:8px 15px;
+    cursor: pointer;
+}
+
+.demo:hover{
+    background:hsl(0, 88%, 74%);
+}
+
+.img-container img{
+    height: 400px;
+    margin-left: 10%;
+}
+
+.img-container{
+    overflow: hidden;
+    position: relative;
+    top: -190px;
+}
+
+@media screen and (min-width:801px){
+    .btns{
+        display: none;
+    }
+    .nav-list li:nth-child(5){
+        display: none;
+    }
+}
+
+@media screen and (max-width:1076px){
+    .intro, .logo-img{
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    h1{
+        font-size: 1.9em;
+    }
+    h4{
+        font-size: 1.3em;
+    }
+    .intro p{
+        width: 90%;
+    }
+    .btns{
+        margin:40px;
+        border: none;
+        background: transparent;
+       float: right;
+       cursor: pointer;
+    }
+    .img-container img{
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width:800px){  
+    h1{
+        font-size: 2em;
+    }
+    h4{
+        font-size: 1.5em;
+    }
+    .nav-list {
+        background: white;
+        position: absolute;
+        width: 300px;
+        height: 0;
+        overflow:hidden;
+        transition: ease-in-out 0.3s;
+        margin-top: 60px;
+        margin-left: 60px;
+        z-index: 999;
+        transform: translate(-90%, 40%);
+        box-shadow: 0px 1px 5px rgba(0,0,0, 0.5);
+    }
+    .close-btn{
+        display: none;
+        transition: ease-in-out 0.3s;
+    }
+    .show-menu {
+        height: 180px;
+    }
+    .show-close{
+        display: grid;
+    }
+    .hide-bars{
+        display: none;
+    }
+    .nav-list li{
+        display: grid;
+        padding: 18px;
+        position: relative;
+        text-align: center;
+        top: 5%;
+        left: -3%;
+        height: 0;
+    }
+    .nav-list li:nth-child(4){
+        display: none;
+    }
+    .nav-list li:nth-child(5){
+        border-bottom: 1px solid hsl(207, 33%, 95%);
+        width: 80%;
+        padding: 5px;
+        margin:0 auto;
+    }
+    .nav-items{
+        height: 600px;
+        width: 35%;
+    }
+    .img-container{
+        top:-450px;
+    }
+    .img-container img{
+        margin-left: 10%;
+    }
+    .content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .intro{
+        top: -300px;
+    }
+}
+
+@media screen and (max-width:530px){  
+    .intro, .logo-img{
+        margin-left: 30px;
+    }
+    h1{
+        font-size: 2em;
+    }
+    h4{
+        font-size: 1.1em;
+    }
+    .intro{
+        top: -220px;
+    }
+    .nav-items{
+        height: 450px;
+        width: 35%;
+    }
+    .img-container{
+        top:-300px;
+    }
+    .img-container img{
+        margin-left: 2%;
+        height: 270px;
+    }
+}
+
+@media screen and (max-width:320px){
+    h1{
+        font-size: 1.8em;
+    }
+    h4{
+        font-size: 0.9em;
+    }
+    .nav-list{
+        width: 250px;
+    }
+}
